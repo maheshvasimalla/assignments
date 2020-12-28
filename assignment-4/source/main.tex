@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+\title{DLD Assignment 4}
+\author{Mahesh Vasimalla}
+%\date{December 2020}
+
+\begin{document}
+  
+ \maketitle
+
+  \section{QUESTION}
+   The expression $ \sim(p \leftrightarrow q)$   is equivalent to:
+  
+ %\usepackage{enumitem}
+ 
+ \begin{enumerate}[label=(\Alph*)]
+     \item  $ p \bigwedge \sim q $
+     \item  $(\sim p \bigwedge q) \bigvee (\sim q \bigwedge p)$
+     \item  $p \bigvee q$
+     \item  ($p \bigwedge \sim q) \bigvee (q \bigwedge \sim p)$
+ 
+\end{enumerate} 
+   
+
+   
+  \section{ANSWER}
+    $ \to  \sim (p\leftrightarrow q) $
+   
+    $ \to  \sim {(p\longrightarrow q)\bigwedge(q \longrightarrow p)}$ 
+    
+    $ \to  { \sim(p \longrightarrow q) \bigvee \sim(q\longrightarrow p) }$
+    
+BY DEMORGAN'S LAW;
+
+   ${(p \bigwedge  \sim q) \bigvee (q \bigwedge \sim p) }$
+ 
+
+  
+\section{TRUTH TABLE}
+  
+\maketitle  
+ %TRUTH TABLE:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\textit{\textbf{p}} & \textit{\textbf{q}} & \textbf{A} & \textbf{B} & \textit{\textbf{$\sim$p}} & \textit{\textbf{$\sim$q}} & \textbf{C} & \textbf{D} & \textbf{E} \\ \hline
+T                   & T                   & T          & F          & F                         & F                         & F          & F          & F          \\
+T                   & F                   & F          & T          & F                         & T                         & T          & F          & F          \\
+F                   & T                   & F          & T          & T                         & F                         & F          & T          & T          \\
+F                   & F                   & T          & F          & T                         & T                         & F          & F          & F          \\ \hline
+\end{tabular}
+\caption{Truth Table}
+\label{tab:table1}
+\end{table}
+  
+ Hence proved that
+ 
+ $ \sim(p \leftrightarrow q) \equiv    {(p \bigwedge  \sim q) \bigvee (q \bigwedge \sim p) }$
+    
+   \end{document}
