@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{a5}
+\author{maheshvasimalla333 }
+\date{December 2020}
+
+
+\title{logicgate}
+
+\author{annu\thanks{ggv sir}}
+
+\usepackage{circuitikz}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{circuitikz}
+ \draw
+(0,0)node[and port](myand1){}
+
+(0,2)node[and port](myand2){}
+
+(2,1)node[xor port](myxor){}
+
+(myand1.out)--(myxor.in 1)
+(myand2.out)--(myxor.in 2);
+
+\end{circuitikz}
+
+
+
+
+\end{document}
