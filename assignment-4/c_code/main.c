@@ -32,3 +32,4 @@ printf("%x%x%x%x",one&Z,one&Y,one&X,one&W);//Iutput ZYXW
 printf(" ");
 printf("%x%x%x%x\n" ,one&D,one&C,one&B,one&A);//Output DCBA
 return 0;
+}
