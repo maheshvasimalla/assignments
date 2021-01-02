@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{circuitikz}
+\title{Assignment 6}
+\author{mahesh}
+\begin{document}
+\maketitle
+
+\begin{figure}[h]
+\centering
+\begin{circuitikz}
+\ctikzset{logic ports origin=center};
+ \draw
+ (0,0)node[and port](myand1){}
+ (0,4)node[and port](myand2){}
+ (2,2)node[or port](myor){}
+
+ (myand1.bin 2) node[ocirc, left]{}
+ (myand2.bin 1) node[ocirc, left]{}
+ 
+
+ (myand1.in 1) node[anchor=east] {p}
+ (myand1.in 2) node[anchor=east] {q}
+ (myand2.in 1) node[anchor=east] {p}
+ (myand2.in 2) node[anchor=east] {q}
+ (myor.out) node[anchor=west] {Y}
+ 
+ (myand1.out)--(myor.in 1){}
+ (myand2.out)--(myor.in 2){};
+ 
+\end{circuitikz}
+\caption{Logic Gate }
+\label{fig:my_label}
+\end{figure}
+ 
+\begin{equation} 
+Y=p.\overline{q} + q.\overline{p}
+\end{equation}
+
+\end{document}
