@@ -1,0 +1,10 @@
+\begin{tikzpicture}[node distance=5cm and 4cm,>=stealth',auto, every place/.style={draw}]
+    \node [place] (Q0) {Q=0};
+    \coordinate[node distance=4cm,left of=Q0] (left-Q0);
+    \coordinate[node distance=4cm,right of=Q0] (right-Q0);
+    \node [place] (Q1) [right of=Q0] {Q=1};
+    \path[->] (Q0) edge [bend left] node {A=1} (Q1);
+    \path[->] (Q1) edge [loop above] node {A=0} (Q1);
+    \path[->] (Q1) edge [bend left,] node {A=1} (Q0);
+    \path[->] (Q0) edge [loop above] node {A=0} (Q0);
+\end{tikzpicture}
