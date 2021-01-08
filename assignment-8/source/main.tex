@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{karnaugh-map}
+
+\title{DLD  Assignment 8}
+\author{Mahesh Vasimalla}
+\date{January 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Boolean equation}
+\begin{equation}
+F\;=\;\overline{p}\;q\;+\;p\;+\;\overline{q}
+\end{equation}
+
+\section{K-Map}
+\begin{figure}[h]
+    \centering
+    \begin{karnaugh-map}[2][2][1][][]
+    \minterms{1,2}
+    \autoterms[0]
+    \implicant{0}{0}
+    \implicant{3}{3}
+    \draw[color=black, ultra thin] (0, 2) --
+    node [pos=0.7, above right, anchor=south west] {$p$} 
+    node [pos=0.7, below left, anchor=north east] {$q$} 
+    ++(135:1);
+\end{karnaugh-map}
+    \caption{K-map for eq.(1)} 
+    \label{fig:my_label}
+\end{figure}
+
+Using the above K-map, we can find the POS form as given below
+    
+\section{Product of Sums form}    
+\begin{equation}
+    F\;=\;(p\;+\;q)(\overline{p}\;+\;\overline{q})
+\end{equation}    
+
+
+\end{document}
